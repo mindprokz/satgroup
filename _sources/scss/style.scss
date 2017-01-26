@@ -1,7 +1,13 @@
-@import 
+/*
+Theme Name: Main satgroup
+Version: 1.0
+*/
+
+@import
   'sass/_susy.scss',
   'sections/reset.scss',
   'sections/mail';
+
 $susy: (
   columns: 12,
   gutters: 1/2,
@@ -9,17 +15,58 @@ $susy: (
   gutter-position: outside,
 );
 
-$container: 1170px;
-$container-float: 100%;
+$container-width-desktop-big: 1560px;
+$container-width-desktop: 1170px;
+$container-width-tablet: 750px;
+$container-width-mobile: 480px;
+$container-float-width: 100%;
 
-.container-float{
-  @include container($container-float);
+a { text-decoration: none; }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  padding-top: 130px;
+
+  @media (max-width: 480px) {
+    width: 480px;
+  }
+
+  @media (max-width: 750px) {
+    padding-top: 81px;
+  }
 }
 
-.container{
-  @include container($container);
-}  
+.container-float {
+  @include container($container-float-width);
 
-.test{
-  @include span(6);	
+  width: $container-float-width;
 }
+
+.container {
+  @media only screen and (min-width: 200px) {
+    @include container($container-float-width);
+  }
+
+  @media only screen and (min-width: 1200px) {
+    @include container($container-width-desktop);
+  }
+
+  @media (min-width: 1560px) {
+    @include container($container-width-desktop-big);
+  }
+
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+@import 'sections/menu',
+  'sections/slider',
+  'sections/logo_line',
+  'sections/quote',
+  'sections/restourant',
+  'sections/contact';

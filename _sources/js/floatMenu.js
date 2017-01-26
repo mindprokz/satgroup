@@ -1,33 +1,33 @@
 // Принимает объект с настройками для меню
 export default class FloatMenu{
-  // @params - object
-  construnctor(params){
-    this.elem = params.elem;
-    this.height = params.height;
-    this.first_class = params.first_class;
-    this.second_class = params.second_class;
-    this.active_class = params.first_class;
-  }
 
-  init(){
+  init(params){
+    let _obj = {
+      elem: params.elem,
+      height: params.height,
+      first_class: params.first_class,
+      second_class: params.second_class,
+      active_class: params.first_class,
+    }
 
-    if(window.pageYOffset > this.height){
-      this.elem.classList.add(this.first_class);
-      this.elem.classList.add(this.second_class);
+
+    if(window.pageYOffset > _obj.height){
+      _obj.elem.classList.add(_obj.first_class);
+      _obj.elem.classList.add(_obj.second_class);
     }else{
-      this.elem.classList.add(this.first_class);
+      _obj.elem.classList.add(_obj.first_class);
     }
 
     window.addEventListener('scroll', () => {
 
-      if(window.pageYOffset > this.height &&  this.active_class === this.first_class){
-        this.elem.classList.add(this.second_class);
-        this.active_class = this.second_class;
-      }else if(window.pageYOffset < this.height && this.active_class === this.second_class ){
-        this.elem.classList.remove(this.second_class);
-        this.active_class = this.first_class;
+      if(window.pageYOffset > _obj.height &&  _obj.active_class === _obj.first_class){
+        _obj.elem.classList.add(_obj.second_class);
+        _obj.active_class = _obj.second_class;
+      }else if(window.pageYOffset < _obj.height && _obj.active_class === _obj.second_class ){
+        _obj.elem.classList.remove(_obj.second_class);
+        _obj.active_class = _obj.first_class;
       }
 
-	});  
+	});
   }
-}  
+}

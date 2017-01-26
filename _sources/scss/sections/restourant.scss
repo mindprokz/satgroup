@@ -1,0 +1,235 @@
+.restourant {
+  height: 480px;
+
+  .info {
+    height: 480px;
+    float: left;
+    box-sizing: border-box;
+    position: relative;
+    padding-top: 48px;
+    padding-bottom: 52px;
+    position: relative;
+
+    .button {
+      position: absolute;
+      bottom: 50px;
+      margin-right: 50%;
+      transform: translateX(-50%);
+    }
+
+    p {
+      text-align: center;
+      font-size: 15px;
+
+      @media (min-width: 750px) {
+        text-align: left;
+      }
+
+      @media (min-width: 970px) {
+        font-size: 17px;
+      }
+    }
+
+    &::after {
+      content: " "; /* Older browser do not support empty content */
+      visibility: hidden;
+      display: block;
+      height: 0;
+      clear: both;
+    }
+
+    .wrap {
+      float: right;
+      text-align: center;
+
+      &::after {
+        content: " "; /* Older browser do not support empty content */
+        visibility: hidden;
+        display: block;
+        height: 0;
+        clear: both;
+      }
+
+      @media (max-width: 750px) {
+        width: 100%;
+      }
+
+      @media (min-width: 750px) {
+        margin-right: 20px;
+      }
+
+      @media (min-width: 800px) {
+        margin-right: 35px;
+      }
+
+      @media (min-width: 970px) {
+        width: 450px;
+      }
+
+      @media (min-width: 1560px) {
+        margin-right: 170px;
+      }
+    }
+
+    @media (max-width: 750px) {
+      float: right;
+    }
+
+    @media (min-width: 1px) {
+      width: 100%;
+    }
+
+    @media (min-width: 750px) {
+      width: 55%;
+    }
+
+    @media (min-width: 970px) {
+      width: 50%;
+    }
+
+    @media (min-width: 1170px) {
+      width: 41%;
+    }
+  }
+
+  .poster {
+    width: 59%;
+    height: 480px;
+    float: right;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+
+    img {
+      min-height: 100%;
+      min-width: 100%;
+      position: absolute;
+      bottom: 0;
+    }
+
+    h3 {
+      position: absolute;
+      bottom: 30px;
+      width: 100%;
+      color: rgba(#fff, 0.7);
+      font-size: 25px;
+      text-transform: uppercase;
+      text-align: center;
+      font-weight: 700;
+
+      @media (min-width: 970px) {
+        font-size: 40px;
+      }
+    }
+
+    @media (max-width: 750px) {
+      float: left;
+    }
+
+    @media (min-width: 1px) {
+      width: 100%;
+    }
+
+    @media (min-width: 750px) {
+      width: 45%;
+    }
+
+    @media (min-width: 970px) {
+      width: 50%;
+    }
+
+    @media (min-width: 1170px) {
+      width: 59%;
+    }
+  }
+
+  &.dark {
+    .info {
+      background: url('images/texture_dark.jpg');
+    }
+
+    p {
+      color: #fff;
+      font-weight: 700;
+      padding-top: 40px;
+      padding-bottom: 50px;
+      line-height: 24px;
+    }
+
+    .button {
+      color: #fff;
+      text-transform: uppercase;
+      padding: 15px 30px;
+      font-size: 13px;
+      font-weight: 700;
+      border: 2px solid #fff;
+      transition: border 0.3s ease;
+
+      &:hover {
+        border: 2px solid #000;
+      }
+    }
+  }
+
+  &.middle {
+    .info {
+      background: url('images/texture_middle.jpg');
+    }
+
+    p {
+      color: #262626;
+      font-weight: 700;
+      padding-top: 40px;
+      padding-bottom: 50px;
+      line-height: 24px;
+    }
+
+    .button {
+      color: #262626;
+      text-transform: uppercase;
+      padding: 15px 30px;
+      font-size: 13px;
+      font-weight: 700;
+      border: 2px solid #262626;
+      transition: border 0.3s ease;
+
+      &:hover {
+        border: 2px solid #fff;
+      }
+    }
+  }
+
+  &.light {
+    .info {
+      background: url('images/texture_light.jpg');
+    }
+
+    p {
+      color: #262626;
+      font-weight: 700;
+      padding-top: 40px;
+      padding-bottom: 50px;
+      line-height: 24px;
+    }
+
+    .button {
+      color: #262626;
+      text-transform: uppercase;
+      padding: 15px 30px;
+      font-size: 13px;
+      font-weight: 700;
+      border: 2px solid #262626;
+      transition: border 0.3s ease;
+
+      &:hover {
+        border: 2px solid #fff;
+      }
+    }
+  }
+
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}

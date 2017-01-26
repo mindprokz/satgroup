@@ -1,0 +1,227 @@
+#contact {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background: #fff;
+
+  .container {
+    @media (max-width: 540px) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .ru {
+    .left {
+      @media (min-width: 1px) {
+        background: url('images/geo_mobile_left.jpg') no-repeat center center;
+      }
+
+      @media (min-width: 750px) {
+        background: url('images/geo_verttablet_left.jpg') no-repeat center center;
+      }
+
+      @media (min-width: 970px) {
+        background: url('images/geo_left_tablet.jpg') no-repeat center center;
+      }
+
+      @media (min-width: 1170px) {
+        background: url('images/geo_left_desktop.jpg') no-repeat center center;
+      }
+    }
+
+    .right {
+      @media (min-width: 1px) {
+        background: url('images/geo_right_mobile.jpg') no-repeat center center;
+      }
+
+      @media (min-width: 750px) {
+        background: url('images/geo_right_verttablet.jpg') no-repeat center center;
+      }
+
+      @media (min-width: 970px) {
+        background: url('images/geo_right_tablet.jpg') no-repeat center center;
+      }
+
+      @media (min-width: 1170px) {
+        background: url('images/geo_right_desktop.jpg') no-repeat center center;
+      }
+    }
+  }
+
+  .eng {
+    .left {
+      @media (min-width: 1px) {
+        background: url('images/geo_mobile_left_eng.png') no-repeat center center;
+      }
+
+      @media (min-width: 750px) {
+        background: url('images/geo_verttablet_left_eng.png') no-repeat center center;
+      }
+
+      @media (min-width: 970px) {
+        background: url('images/geo_left_tablet_eng.png') no-repeat center center;
+      }
+
+      @media (min-width: 1170px) {
+        background: url('images/geo_left_desktop_eng.png') no-repeat center center;
+      }
+    }
+
+    .right {
+      @media (min-width: 1px) {
+        background: url('images/geo_right_mobile_eng.png') no-repeat center center;
+      }
+
+      @media (min-width: 750px) {
+        background: url('images/geo_right_verttablet_eng.png') no-repeat center center;
+      }
+
+      @media (min-width: 970px) {
+        background: url('images/geo_right_tablet_eng.png') no-repeat center center;
+      }
+
+      @media (min-width: 1170px) {
+        background: url('images/geo_right_desktop_eng.png') no-repeat center center;
+      }
+    }
+  }
+
+  .kz {
+    .left {
+      @media (min-width: 1px) {
+        background: url('images/geo_mobile_left_kz.png') no-repeat center center;
+      }
+
+      @media (min-width: 750px) {
+        background: url('images/geo_verttablet_left_kz.png') no-repeat center center;
+      }
+
+      @media (min-width: 970px) {
+        background: url('images/geo_left_tablet_kz.png') no-repeat center center;
+      }
+
+      @media (min-width: 1170px) {
+        background: url('images/geo_left_desktop_kz.png') no-repeat center center;
+      }
+    }
+
+    .right {
+      @media (min-width: 1px) {
+        background: url('images/geo_right_mobile_kz.png') no-repeat center center;
+      }
+
+      @media (min-width: 750px) {
+        background: url('images/geo_right_verttablet_kz.png') no-repeat center center;
+      }
+
+      @media (min-width: 970px) {
+        background: url('images/geo_right_tablet_kz.png') no-repeat center center;
+      }
+
+      @media (min-width: 1170px) {
+        background: url('images/geo_right_desktop_kz.png') no-repeat center center;
+      }
+    }
+  }
+
+  .left {
+    @media (min-width: 1px) {
+      float: left;
+      width: 100%;
+      height: 240px;
+      margin-bottom: 30px;
+
+      &::after {
+        content: ' ';
+        display: table;
+        clear: both;
+      }
+    }
+
+    @media (min-width: 750px) {
+      float: left;
+      width: 345px;
+      height: 180px;
+
+      &::after {
+        content: ' ';
+        display: table;
+        clear: both;
+      }
+    }
+
+    @media (min-width: 970px) {
+      float: left;
+      width: 455px;
+      height: 241px;
+
+      &::after {
+        content: ' ';
+        display: table;
+        clear: both;
+      }
+    }
+
+    @media (min-width: 1170px) {
+      float: left;
+      width: 560px;
+      height: 295px;
+
+      &::after {
+        content: ' ';
+        display: table;
+        clear: both;
+      }
+    }
+  }
+
+  .right {
+    @media (min-width: 1px) {
+      float: left;
+      width: 100%;
+      height: 240px;
+
+      &::after {
+        content: ' ';
+        display: table;
+        clear: both;
+      }
+    }
+
+    @media (min-width: 750px) {
+      float: right;
+      width: 345px;
+      height: 180px;
+
+      &::after {
+        content: ' ';
+        display: table;
+        clear: both;
+      }
+    }
+
+    @media (min-width: 970px) {
+      float: right;
+      width: 455px;
+      height: 241px;
+
+      &::after {
+        content: ' ';
+        display: table;
+        clear: both;
+      }
+    }
+
+    @media (min-width: 1170px) {
+      float: right;
+      width: 560px;
+      height: 295px;
+
+      &::after {
+        content: ' ';
+        display: table;
+        clear: both;
+      }
+    }
+  }
+}

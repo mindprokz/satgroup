@@ -1,0 +1,24 @@
+case process.env.NODE_ENV
+  when 'ru'
+    - var info = 'Кухня: японская<br>Время работы: ежедневно с 12:00 - 01:00 <br>г. Астана, пр. Туран, 30 (здание Fitness Palace) <br>Тел.: +7 (7172) 56-77-33, 8 775 793-17-06'
+    - var header = 'Японский ресторан'
+    - var more = 'Подробнее'
+  when 'eng'
+    - var info = 'Cuisine: Japanese<br>Working time: every day from 12:00 PM till 01:00 AM<br>30, Turan Ave. (Fitness Palace bldg), Astana<br>Tel.: +7 (7172) 56-77- 33, 8 775 793-17-06'
+    - var header = 'japanese restaurant'
+    - var more = 'details'
+  when 'kz'
+    - var info = 'Tағамдар: жапондық<br>Жұмыс уақыты: күнделікті 12:00-01:00<br>Мекен жайы: Астана қ., Тұран даңғ., 30 (Fitness Palace кешені)<br>Тел.: +7 (7172) 56-77- 33, 8 775 793-17-06'
+    - var header = 'жапон мейрамханасы'
+    - var more = 'Толығырақ'
+
+sections.restourant.middle
+  a(name="Kiku")
+  .poster
+    img(src!="<?php echo get_template_directory_uri();?>/images/kiku_bg.jpg")
+    h3 #{header}
+  .info
+    .wrap
+      img(src!="<?php echo get_template_directory_uri();?>/images/kiku_site.png")
+      p !{info}
+      a(href="#").button #{more}

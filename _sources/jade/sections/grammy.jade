@@ -1,0 +1,24 @@
+case process.env.NODE_ENV
+  when 'ru'
+    - var info = 'Кухня: европейская, японская, паназиатская<br>Время работы: ежедневно с 18.00 – 06.00<br>г. Астана, пр. Туран, 30 (здание Fitness Palace)<br>Тел.: +7(7172) 279-000, 8 701 100 0703'
+    - var header = 'Караоке - ресторан'
+    - var more = 'Подробнее'
+  when 'eng'
+    - var info = 'Cuisine: European, Japanese, Pan-asian<br>Working time: every day from 06:00 PM till 06:00 AM<br>30, Turan Ave. (Fitness Palace bldg), Astana<br>Tel.: +7(7172) 279-000, 8 701 100 0703'
+    - var header = 'karaoke - restaurant'
+    - var more = 'details'
+  when 'kz'
+    - var info = 'Tағамдар: еуропа, паназиялық, жапондық<br>Жұмыс уақыты: күнделікті 18:00-06:00<br>Мекен жайы: Астана қ., Тұран даңғ., 30 (Fitness Palace кешені)<br>Тел.: +7(7172) 279-000, 8 701 100 0703'
+    - var header = 'караоке - мейрамханасы'
+    - var more = 'Толығырақ'
+
+sections.restourant.dark
+  a(name="Gramm")
+  .poster
+    img(src!="<?php echo get_template_directory_uri();?>/images/grammy_bg.jpg")
+    h3 #{header}
+  .info
+    .wrap
+      img(src!="<?php echo get_template_directory_uri();?>/images/grammy_site.png")
+      p !{info}
+      a(href="#").button #{more}

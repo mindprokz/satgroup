@@ -1,0 +1,37 @@
+| <?php
+|   $args = array(
+|     'post_type' => 'stocks', //Тип поста
+|     'posts_per_page' => 10,//Постов на одной странице
+|     'category_name' => 'uncategorized' //Категория постов
+|   );
+|   $lastBlog = new WP_Query($args);
+| ?>
+#first-slider.flex-container.container-float
+  a(name="main")
+  .flexslider
+    .slides
+      |<?php
+      | if( $lastBlog->have_posts() ):
+      |   while($lastBlog->have_posts() ): $lastBlog->the_post(); ?>
+      li
+        picture
+          source(srcset!="<?php echo(types_render_field( 'mobile_stock', array('raw' => true) ) ); ?>" media="(max-width:750px)")
+          source(srcset!="<?php echo(types_render_field( 'verttablet_stock', array('raw' => true) ) ); ?>" media="(max-width:970px)")
+          source(srcset!="<?php echo(types_render_field( 'tablet_stock', array('raw' => true) ) ); ?>" media="(max-width:1170px)")
+          source(srcset!="<?php echo(types_render_field( 'desktop_stock', array('raw' => true) ) ); ?>" media="(max-width:1980px)")
+          img(src!="<?php echo(types_render_field( 'desktop_stock', array('raw' => true) ) ); ?>")
+      | <?
+      |   endwhile;
+      | endif; ?>
+      //- div(class="text")
+      //-   div(class="container")
+      //-     h3 Акция для в нашем ресторане
+      //-     p Разнообразный и богатый опыт укрепление и развитие структуры требуют определения и уточнения соответствующий условий активизации. Товарищи! дальнейшее развитие различных форм деятельности позволяет выполнять важные задания по разработке соответствующий условий активизации.
+      //-     div(class="wrap")
+      //-       a(class="button fancybox" href="images/test_stock.jpg") Подробнее
+      //- li
+      //-   img(src="images/slider_test.jpg")
+        //- div(class="text")
+        //-   div(class="container")
+        //-     h3 Акция
+        //-     p Разнообразный и богатый опыт укрепление и развитие структуры.

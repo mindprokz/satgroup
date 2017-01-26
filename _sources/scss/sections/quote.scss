@@ -1,0 +1,47 @@
+#quote {
+  width: 100%;
+  padding-top: 67px;
+  padding-bottom: 67px;
+  box-sizing: border-box;
+
+  .quote_visible {
+    border: 10px solid;
+    border-image: url("images/texture_a.jpg") 30 round;
+    position: relative;
+    width: 85%;
+    margin: auto;
+    padding: 60px 75px;
+    box-sizing: border-box;
+
+    @media (max-width: 750px) {
+      padding: 30px 43px;
+    }
+
+    .wrap {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translate(54%, -50%);
+      background: #fff;
+      padding-top: 20px;
+      padding-bottom: 20px;
+
+      @media (max-width: 750px) {
+        zoom: 0.8;
+      }
+    }
+
+    p {
+      font-size: 17px;
+      line-height: 22px;
+
+      @media (max-width: 750px) {
+        font-size: 13px;
+      }
+    }
+
+    b {
+      font-weight: 700;
+    }
+  }
+}

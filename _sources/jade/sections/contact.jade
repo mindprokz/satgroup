@@ -1,0 +1,13 @@
+case process.env.NODE_ENV
+  when 'ru'
+    - var lang = 'ru'
+  when 'eng'
+    - var lang = 'eng'
+  when 'kz'
+    - var lang = 'kz'
+
+section#contact
+  a(name="contact")
+  .container(class="#{lang}")
+    .left
+    .right

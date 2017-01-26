@@ -1,0 +1,24 @@
+case process.env.NODE_ENV
+  when 'ru'
+    - var info = 'Кухня: восточная, узбекская<br>Время работы: ежедневно с 12:00 - 01:00 <br>Адрес: г. Астана, ул. Жанибек и Керей ханов, 14/2 (уг. ул. Сауран), ЖК «Arnau Premium»<br>Телефон: +77172 222 888 +7701 070707 2'
+    - var header = 'Восточный ресторан'
+    - var more = 'Подробнее'
+  when 'eng'
+    - var info = 'Cuisine: Eastern, Uzbek<br>Working time: every day from 12:00 PM till 01:00 AM<br>30, Turan Ave. (Fitness Palace bldg), Astana<br>Tel.: +7 (7172) 222 888 +7701 070707 2'
+    - var header = 'eastern restaurant'
+    - var more = 'details'
+  when 'kz'
+    - var info = 'Tағамдар: шығыс, өзбек<br>Жұмыс уақыты: күнделікті 12:00-01:00<br>Мекен жайы: Астана қ., Керей, Жанибек хандар к-сі, 14/2<br>Тел.: +7 (7172) 222 888 +7701 070707 2'
+    - var header = 'жапон мейрамханасы'
+    - var more = 'Толығырақ'
+
+sections.restourant.dark
+  a(name="Sunduk")
+  .poster
+    img(src!="<?php echo get_template_directory_uri();?>/images/sunduk_bg.jpg")
+    h3 #{header}
+  .info
+    .wrap
+      img(src!="<?php echo get_template_directory_uri();?>/images/sunduk_site.png")
+      p !{info}
+      a(href="#").button #{more}

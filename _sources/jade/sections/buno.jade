@@ -1,0 +1,24 @@
+case process.env.NODE_ENV
+  when 'ru'
+    - var info = 'Кухня: европейская, смешанная<br> Время работы: ежедневно с 12:00 - 01:00 <br>Адрес: г. Астана, ул. Жанибек и Керей ханов, 14/2 (уг. ул. Сауран), ЖК «Arnau Premium»<br>Тел.: +77172 222 444 +7701 070707 3'
+    - var header = 'Кофейня'
+    - var more = 'Подробнее'
+  when 'eng'
+    - var info = 'Cuisine: European, mixed<br>Working time: every day from 12:00 AM till 01:00 AM<br>14/2, Zhanibek and Kerei khans street, Astana<br>Tel.: +7 (7172) 222 444, +7701 070707 3'
+    - var header = 'Coffee house'
+    - var more = 'details'
+  when 'kz'
+    - var info = 'Tағамдар: еуропа, аралас<br>Жұмыс уақыты: күнделікті 12:00-01:00<br>Мекен жайы: Астана қ., Керей, Жанибек хандар к-сі, 14/2<br>Тел.: +7 (7172) 222 444, +7701 070707 3'
+    - var header = 'кофехана'
+    - var more = 'Толығырақ'
+
+sections.restourant.middle
+  a(name="Buno")
+  .poster
+    img(src!="<?php echo get_template_directory_uri();?>/images/buno_bg.jpg")
+    h3 #{header}
+  .info
+    .wrap
+      img(src!="<?php echo get_template_directory_uri();?>/images/buno_site.png")
+      p !{info}
+      a(href="#").button #{more}

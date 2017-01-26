@@ -1,41 +1,33 @@
 import SendFunc from './sendForm.js';
 import FloatMenu from './floatMenu.js';
-//   $(document).ready(function () {
-//     'use strict';
-// //Аякс отправка форм
-//     $("#application").submit(function () {
-//       var data = {
-//         name : document.querySelector('input[name="name"]').value,
-//         email : document.querySelector('input[name="email"]').value,
-//         telephone : document.querySelector('input[name="telephone"]').value
-//       };
-//       $.ajax({
-//         type: "POST",
-//         url: "mail.php",
-//         data: data
-//       }).done(function (value) {
-//         $('#mail')[0].innerHTML = value;
-//         $('#mail').removeClass('not_visible_mail');
-//         setTimeout(function () {
-//           $("#form").trigger("reset");
-//         }, 1000);
-//       });
-//     return false;
-//     });
-//  function  test() {
-// 	console.log('test!');
-// }
-//         $("img, a").on("dragstart", function (event) { event.preventDefault(); });
-//   });
+
+$('.anchor').on('click', function (e) {
+  e.preventDefault();
+  $('html, body').animate({
+    scrollTop:  $('a[name="'+this.hash.slice(1)+'"]').offset().top - 80
+  }, 1000 );
+
+
+  let navigation = document.querySelector('#menu nav');
+
+  if (navigation.classList.contains('open')) {
+    navigation.classList.remove('open');
+  }
+});
+
+$('.flexslider').flexslider({
+  animation: 'slide',
+  controlsContainer: '.flexslider',
+  animationLoop: false
+});
 
 //Плавающее меню
-new FloatMenu({ 
-    elem : document.getElementById('navigation'), 
+new FloatMenu().init({
+    elem : document.getElementById('menu'),
     height : 200,
     first_class : 'menu_fixed_on_top',
     second_class : 'float_menu'
-  }).init();
-
+  });
 
 // Отправка формы обратной связи скрипту для отправления по почте
 let data = {
@@ -44,5 +36,28 @@ let data = {
   telephone : 'input[name="telephone"]'
 };
 
-new SendFunc('application', data, 'mail');
 
+$(".fancybox").click(function() {
+  $(".fancybox").fancybox({
+    maxWidth: 800,
+    maxHeight: 600,
+    fitToView: false,
+    width: document.documentElement.clientWidth > 700 ? '80%' : '90%',
+    height: document.documentElement.clientWidth > 700 ? '40%' : '50%',
+    autoSize: false,
+    closeClick: false,
+    openEffect: 'fade',
+    closeEffect: 'fade',
+  });
+});
+
+document.querySelector('#menu .burger')
+  .addEventListener('click', e => {
+    let navigation = document.querySelector('#menu nav');
+
+    if (navigation.classList.contains('open')) {
+      navigation.classList.remove('open');
+    } else {
+      navigation.classList.add('open');
+    }
+  });

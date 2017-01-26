@@ -1,0 +1,34 @@
+case process.env.NODE_ENV
+  when 'ru'
+    - var about = 'О нас'
+    - var rest = 'Рестораны'
+    - var contact = 'Месторасположение'
+  when 'eng'
+    - var about = 'About us'
+    - var rest = 'Restaurants'
+    - var contact = 'Location'
+  when 'kz'
+    - var about = 'Біз туралы'
+    - var rest = 'Мейрамханалар'
+    - var contact = 'Орналасқан жері'
+
+header#menu
+  .container
+    a(href="#main").anchor: img(src!="<?php echo get_template_directory_uri();?>/images/logo_small.png")#logo_small
+    a(href="#main").anchor: img(src!="<?php echo get_template_directory_uri();?>/images/logo_mobile.png")#logo_mobile
+    a(href="#main").anchor: img(src!="<?php echo get_template_directory_uri();?>/images/logo_big.png")#logo_big
+    nav
+      a(href="#about").anchor #{about}
+      a(href="#rests").anchor #{rest}
+      //a(href="#").anchor События
+      //a(href="#").anchor Партнеры
+      a(href="#contact").anchor #{contact}
+    .lang
+      a(href="http://eng.satgroup.kz") EN
+      a(href="http://satgroup.kz") RU
+      a(href="http://kz.satgroup.kz") KZ
+    .social
+      a(href="https://www.instagram.com/satgrouprest/" target="_blank").inst
+      a(href="https://www.facebook.com/SAT-GROUP-Rest-1823563401189352/?hc_ref=SEARCH&fref=nf" target="_blank").facebook
+      a(href="mailto:info@satgroup.kz").mail
+    .burger
