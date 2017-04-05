@@ -54,6 +54,10 @@
 
 	var _floatMenu2 = _interopRequireDefault(_floatMenu);
 
+	var _modal_feed = __webpack_require__(3);
+
+	var _modal_feed2 = _interopRequireDefault(_modal_feed);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	$('.anchor').on('click', function (e) {
@@ -113,6 +117,8 @@
 	    navigation.classList.add('open');
 	  }
 	});
+
+	(0, _modal_feed2.default)();
 
 /***/ },
 /* 1 */
@@ -216,6 +222,70 @@
 	}();
 
 	exports.default = FloatMenu;
+
+/***/ },
+/* 3 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = init;
+	exports.open_modalFeed = open_modalFeed;
+	exports.close_modalFeed = close_modalFeed;
+
+	function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+	function init() {
+	  document.querySelector('#modal_feedback .modal_feed img').addEventListener('click', function (e) {
+	    close_modalFeed();
+	  });
+
+	  [].concat(_toConsumableArray(document.querySelectorAll('.feed_open_fc'))).forEach(function (el) {
+	    console.log(el);
+	    el.addEventListener('click', function (e) {
+	      e.preventDefault();
+	      open_modalFeed();
+	    });
+	  });
+
+	  send_mail();
+	}
+
+	function open_modalFeed() {
+	  document.querySelector('#modal_feedback').classList.remove('close_modal_feed');
+	}
+
+	function close_modalFeed() {
+	  document.querySelector('#modal_feedback').classList.add('close_modal_feed');
+	}
+
+	function send_mail() {
+	  document.querySelector('#form_submit').addEventListener('click', function (e) {
+	    e.preventDefault();
+
+	    var data = {
+	      name: document.querySelector('#form_name').value,
+	      email: document.querySelector('#form_mail').value,
+	      message: document.querySelector('#form_message').value
+	    };
+
+	    $.post('http://satgroup.kz/wp-content/themes/sat/mail.php', data).done(function (value) {
+	      var mail = document.querySelector('#mail');
+	      mail.innerHTML = value;
+	      mail.classList.remove('not_visible_mail');
+
+	      setTimeout(function () {
+	        $('#modal_form_feedback').trigger("reset");
+	        mail.classList.add('not_visible_mail');
+	      }, 2000);
+	    });
+
+	    close_modalFeed();
+	  });
+	}
 
 /***/ }
 /******/ ]);

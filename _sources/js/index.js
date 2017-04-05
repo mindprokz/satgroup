@@ -1,5 +1,6 @@
 import SendFunc from './sendForm.js';
 import FloatMenu from './floatMenu.js';
+import initFeed from './modal_feed'
 
 $('.anchor').on('click', function (e) {
   e.preventDefault();
@@ -61,3 +62,5 @@ document.querySelector('#menu .burger')
       navigation.classList.add('open');
     }
   });
+
+initFeed();
