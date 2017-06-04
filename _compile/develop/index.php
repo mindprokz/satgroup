@@ -53,7 +53,7 @@
       </div>
     </div>
     <section id="logos">
-      <div class="container"><a href="http://grammy.kz" target="_blank"><img src="<?php echo get_template_directory_uri();?>/images/Gramm.png"></a><a href="http://brewery.kz" target="_blank"><img src="<?php echo get_template_directory_uri();?>/images/Brew.png"></a><a href="http://arnau-restaurant.kz" target="_blank"><img src="<?php echo get_template_directory_uri();?>/images/arnau.png"></a><a href="http://kikumatsuri.kz" target="_blank"><img src="<?php echo get_template_directory_uri();?>/images/Kiku.png"></a><a href="#Sunduk" class="anchor"><img src="<?php echo get_template_directory_uri();?>/images/Sunduk.png"></a><a href="#Butchers" class="anchor"><img src="<?php echo get_template_directory_uri();?>/images/Butchers.png"></a><a href="#Buno" class="anchor"><img src="<?php echo get_template_directory_uri();?>/images/buno.png"></a></div>
+      <div class="container"><a href="http://grammy.kz" target="_blank"><img src="<?php echo get_template_directory_uri();?>/images/Gramm.png"></a><a href="http://brewery.kz" target="_blank"><img src="<?php echo get_template_directory_uri();?>/images/Brew.png"></a><a href="http://arnau-restaurant.kz" target="_blank"><img src="<?php echo get_template_directory_uri();?>/images/arnau.png"></a><a href="http://kikumatsuri.kz" target="_blank"><img src="<?php echo get_template_directory_uri();?>/images/Kiku.png"></a><a href="http://sundukastana.kz/" class="anchor"><img src="<?php echo get_template_directory_uri();?>/images/Sunduk.png"></a><a href="http://butchers.kz/" class="anchor"><img src="<?php echo get_template_directory_uri();?>/images/Butchers.png"></a><a href="#Buno" class="anchor"><img src="<?php echo get_template_directory_uri();?>/images/buno.png"></a></div>
     </section>
     <section id="quote"><a name="about"></a>
       <div class="container">
@@ -110,7 +110,7 @@
       </div>
       <div class="info">
         <div class="wrap"><img src="<?php echo get_template_directory_uri();?>/images/sunduk_site.png">
-          <p>Cuisine: Eastern, Uzbek<br>Working time: every day from 12:00 PM till 01:00 AM<br>30, Turan Ave. (Fitness Palace bldg), Astana<br>Tel.: +7 (7212) 222-444, +7701 070707 2</p><a href="#" class="button">details</a>
+          <p>Cuisine: Eastern, Uzbek<br>Working time: every day from 12:00 PM till 01:00 AM<br>30, Turan Ave. (Fitness Palace bldg), Astana<br>Tel.: +7 (7212) 222-444, +7701 070707 2</p><a href="http://sundukastana.kz/" target="_blank" class="button">details</a>
         </div>
       </div>
     </sections>
@@ -120,7 +120,7 @@
       </div>
       <div class="info">
         <div class="wrap"><img src="<?php echo get_template_directory_uri();?>/images/butchers_site.png">
-          <p>Cuisine: European, mixed<br>Working time: every day from 12:00 PM till 01:00 AM<br>14/2, Zhanibek and Kerei khans street, Astana<br>Tel.: +7 (7212) 222-666, +7701 070707 4</p><a href="#" class="button">details</a>
+          <p>Cuisine: European, mixed<br>Working time: every day from 12:00 PM till 01:00 AM<br>14/2, Zhanibek and Kerei khans street, Astana<br>Tel.: +7 (7212) 222-666, +7701 070707 4</p><a href="http://butchers.kz/" target="_blank" class="button">details</a>
         </div>
       </div>
     </sections>
